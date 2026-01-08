@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Hanoi TSP Ultimate Solver</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/arrowbounce.css">
+</head>
+<body>
+
+<div id="controls">
+    <h3>TỐI ƯU LỘ TRÌNH</h3>
+    
+    <div class="guide">
+        <b>Click bản đồ:</b> Thêm điểm.<br>
+        <b>Click vào ghim:</b> Xóa điểm.<br>
+        <b>Điểm số 1:</b> Điểm xuất phát.
+    </div>
+    
+    <div id="point-count">Đã chọn: 0 điểm</div>
+    
+    <button class="btn-calc" onclick="calculateRoute()">
+        TÌM ĐƯỜNG NGẮN NHẤT
+    </button>
+    
+    <button class="btn-clear" onclick="clearMap()">
+        LÀM MỚI
+    </button>
+    
+    <div id="status">Sẵn sàng</div>
+
+    <div id="route-details">
+        <h4 style="text-align: center; margin: 0 0 10px 0; color: #2d3436; font-size: 14px; text-transform: uppercase;">Chi tiết di chuyển</h4>
+        <div id="steps-container"></div>
+        <div style="margin-top: 10px; text-align: right; font-weight: bold; color: #00b894; font-size: 16px;">
+            Tổng: <span id="total-dist">0</span> km
+        </div>
+    </div>
+</div>
+
+<div id="map"></div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mapbox-polyline/1.1.1/polyline.min.js"></script>
+<script src="js/main.js?v=1004"></script>
+</body>
+</html>
